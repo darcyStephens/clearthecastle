@@ -5,4 +5,6 @@ PersonList shallowCopyPersonList(PersonList pl){
     PersonList A;
     A.numPeople = pl.numPeople;
     A.people = pl.people;
+
+    return A;
 }
