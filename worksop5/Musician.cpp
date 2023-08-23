@@ -6,7 +6,7 @@ using namespace std;
 
  
 
-Musician::Musician() {
+Musician::Musician() { //giving meaning to the default constructor
 
     _instrument = "null";
 
@@ -14,7 +14,7 @@ Musician::Musician() {
 
 }
 
-Musician::Musician(std::string instrument, int experience):
+Musician::Musician(std::string instrument, int experience): //giving meaning to the member constructor
 
     _instrument(instrument), _experience(experience){
 
@@ -22,7 +22,7 @@ Musician::Musician(std::string instrument, int experience):
 
     }
 
-std::string Musician::get_instrument(){
+std::string Musician::get_instrument(){ //giving meaning to the function
 
     return _instrument;
 
@@ -30,7 +30,7 @@ std::string Musician::get_instrument(){
 
  
 
-int Musician::get_experience(){
+int Musician::get_experience(){ //giving meaning to the function
 
     return _experience;
 

@@ -20,13 +20,13 @@ private:
 
 public:
 
-Musician();
+Musician(); //default constructor
 
-Musician(std::string instrument, int experience);
+Musician(std::string instrument, int experience); //constructor with members
 
-std::string get_instrument();
+std::string get_instrument(); // defining get_instrument function
 
-int get_experience();
+int get_experience(); // defining get_experience function
 
 };
 
