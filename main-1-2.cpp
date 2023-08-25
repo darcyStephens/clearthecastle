@@ -13,13 +13,14 @@ int main() {
     yard.add_Stock(bike2);
     yard.add_Stock(bike3);
 
-    std::cout << "Total Stock Count: " << yard.get_Total_Stock_Count() << std::endl;
-    std::cout << "BrandA Count: " << yard.get_Stock_Quantity(1) << std::endl;
-    std::cout << "BrandB Count: " << yard.get_Stock_Quantity(2) << std::endl;
+     yard.get_Total_Stock_Count();
+     yard.get_Stock_Quantity(1);
+    yard.get_Stock_Quantity(2);
 
     Bike *stockList = yard.get_Current_Stock_List();
-    for (int i = 0; i < yard.get_Total_Stock_Count(); ++i) {
-        std::cout << "Bike " << i + 1 << ": Brand = " << stockList[i].get_brand() << ", Code = " << stockList[i].get_code() << std::endl;
+    for (int i = 0; i < yard.get_Total_Stock_Count(); i++) {
+        stockList[i].get_brand();
+        stockList[i].get_code();
     }
 
     return 0;
