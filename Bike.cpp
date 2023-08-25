@@ -22,7 +22,7 @@ Bike::Bike(std::string brand, int code): //giving meaning to the member construc
 
     }
 
-std::string Bike::get_brand(){ //giving meaning to the function
+std::string Bike::getBrand(){ //giving meaning to the function
 
     return _brand;
 
@@ -30,7 +30,7 @@ std::string Bike::get_brand(){ //giving meaning to the function
 
  
 
-int Bike::get_code(){ //giving meaning to the function
+int Bike::getCode(){ //giving meaning to the function
 
     return _code;
 

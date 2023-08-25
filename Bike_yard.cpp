@@ -16,7 +16,7 @@ int Bike_yard::get_Total_Stock_Count() {
 int Bike_yard::get_Stock_Quantity(int code) {
     int Stock_Quantity = 0;
 for (int i = 0; i < capacity; i++){
-    if (stockList[i].get_code()  == code){
+    if (stockList[i].getCode()  == code){
         Stock_Quantity++;
          }
     }
