@@ -18,7 +18,7 @@ private:
 
     int current_size;
 
-    Musician* members;
+    Musician* members; //pointer to an insdtance of muso
 
  
 
