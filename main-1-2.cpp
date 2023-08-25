@@ -19,8 +19,8 @@ int main() {
 
     Bike *stockList = yard.get_Current_Stock_List();
     for (int i = 0; i < yard.get_Total_Stock_Count(); i++) {
-        stockList[i].get_brand();
-        stockList[i].get_code();
+        stockList[i].getBrand();
+        stockList[i].getCode();
     }
 
     return 0;
