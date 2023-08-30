@@ -57,7 +57,7 @@ bool ParkingLot::unparkVehicle(int ID)
         if(vehicles[i]->getID() == ID)
         {
             delete vehicles[i];
-            std::cout<<"unparked vehicle " << ID << std::endl;
+            //std::cout<<"unparked vehicle " << ID << std::endl;
             
             return true;
         }
