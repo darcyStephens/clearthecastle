@@ -14,7 +14,7 @@ class ParkingLot: public Vehicle
 
     public:
     ParkingLot();
-    ParkingLot(int maximum, int capacity);
+    ParkingLot(int maximum);
     ~ParkingLot();
     int getCount();
     bool parkVehicle(Vehicle* vehicleOBJ);

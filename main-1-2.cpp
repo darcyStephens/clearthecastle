@@ -12,7 +12,7 @@ int main()
     int unparkID;
     std::cout << "Enter the 10 vehicles: ";
 
-    ParkingLot parkingLot(maximum, 0);
+    ParkingLot parkingLot(maximum);
 
     // Vehicle** vehicles = new Vehicle*[10]; // Dynamically allocate an array of pointers
 

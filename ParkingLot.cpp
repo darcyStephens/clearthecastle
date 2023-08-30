@@ -11,10 +11,10 @@ ParkingLot::ParkingLot()
 
 }
 
-ParkingLot::ParkingLot(int maximum, int capacity)
+ParkingLot::ParkingLot(int maximum)
 {
     _maximum = maximum;
-    _count = capacity;
+    _count = 0;
     vehicles = new Vehicle*[_maximum];
 }
 
