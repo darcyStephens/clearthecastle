@@ -14,14 +14,14 @@ ParkingLot::ParkingLot()
 ParkingLot::ParkingLot(int maximum)
 {
     _maximum = maximum;
-    _count = 0;
+    _count = -1;
     vehicles = new Vehicle*[_maximum];
 }
 
 ParkingLot::~ParkingLot()
 {
     // Deallocate memory for each Vehicle object pointer
-    for (int i = 0; i < _count; ++i)
+    for (int i = 0; i < _count; i++)
     {
         delete vehicles[i];
     }
@@ -30,7 +30,7 @@ ParkingLot::~ParkingLot()
 
 int ParkingLot::getCount()
 {
-    std::cout<< "Number of vehicles parked: " << _count << std::endl;
+   // std::cout<< "Number of vehicles parked: " << _count << std::endl;
     return _count;
 }
 
