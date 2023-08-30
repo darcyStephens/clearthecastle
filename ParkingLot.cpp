@@ -1,91 +1,60 @@
-#include <string>
-#include <iostream>
-#include <ctime>
 #include "ParkingLot.h"
+#include <iostream>
+#include <typeinfo>
+#include "Bus.h"
+#include "Car.h"
+#include "Motorbike.h"
+#include "Vehicle.h"
+using namespace std;
 
-ParkingLot::ParkingLot()
-{
-    _maximum = 0;
-    _count = 0;
-    vehicles = nullptr;
-
+ParkingLot::ParkingLot(int maximum) {
+  this->_maximum = maximum;
+  this->_count=0;
+  vehicles = new Vehicle[maximum];
 }
 
-ParkingLot::ParkingLot(int maximum)
-{
-    _maximum = maximum;
-    _count = 0;
-    vehicles = new Vehicle*[_maximum];
-}
+int ParkingLot::getCount() { return _count; }
 
-ParkingLot::~ParkingLot()
-{
-    // Deallocate memory for each Vehicle object pointer
-    for (int i = 0; i < _count; i++)
-    {
-        delete vehicles[i];
+void ParkingLot::parkVehicle(Vehicle* vehicleOBJ) {
+  if (_count < _maximum) {
+    vehicles[_count] = *vehicleOBJ;
+    _count++;
+  } else {
+    cout << "The lot is full" << endl;
+  }
+}
+void ParkingLot::unparkVehicle(int ID) {
+ int index = -1;
+  for (int i = 0; i < _count; i++) {
+    if (vehicles[i].getID() == ID) {
+      index = i;
+      break;
     }
-    delete[] vehicles; // Deallocate the array of pointers
-}
+  }
 
-int ParkingLot::getCount()
-{
-   // std::cout<< "Number of vehicles parked: " << _count << std::endl;
-    return _count;
-}
-
-bool ParkingLot::parkVehicle(Vehicle* vehicleOBJ)
-{
-    if(_count < _maximum)
-    {
-        vehicles[_count] = vehicleOBJ;
-        _count++;
-        //std::cout<<"Number of vehicles parked: " << _count <<std::endl;
-        return true;
-
+  if (index != -1) {
+    for (int i = index; i < _count - 1; i++) {
+      vehicles[i] = vehicles[i + 1];
     }
-    if(_count == _maximum)
-    {
-        std::cout<< "The lot is full" << std::endl;;
-        return false;
-
-    }
+    _count--;
+  } else {
+    cout << "Vehicle not in the lot" << endl;
+  }
 }
 
-bool ParkingLot::unparkVehicle(int ID)
-{
-    for(int i = 0; i < _maximum; i++)
-    {
-        if(vehicles[i]->getID() == ID)
-        {
-            delete vehicles[i];
-            //std::cout<<"unparked vehicle " << ID << std::endl;
-            
-            return true;
+int ParkingLot::countOverstayingVehicles(int maxDuration) {
+    int count = 0;
+
+    for (int i = 0; i < _count; i++) {
+        if (vehicles[i].getParkingDuration() > maxDuration) {
+            count++;
         }
-        
-
-
     }
-    return false;
 
-    
+    return count;
 }
 
-int ParkingLot::countOverstayingVehicles(int maxParkingDuration)
-{
-    int numOfOvers = 0;
-    for(int i = 0; i < _maximum; i++)
-    {
-        if(vehicles[i]->getParkingDuration() > maxParkingDuration)
-        {
-            numOfOvers++;
-           
-        }
 
-
-    }
-    return numOfOvers;
-   
-
+ParkingLot::~ParkingLot() {
+  delete[] vehicles;
 }
