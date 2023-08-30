@@ -39,6 +39,7 @@ bool ParkingLot::parkVehicle(Vehicle* vehicleOBJ)
     {
         vehicles[_count] = vehicleOBJ;
         _count++;
+        std::cout<<"Number of vehicles parked: " << _count <<std::endl;
         return true;
 
     }
