@@ -60,6 +60,9 @@ bool ParkingLot::unparkVehicle(int ID)
             delete vehicles[i];
             return true;
         }
+        else{
+            std::cout<<"Vehicle not in the lot" << std::endl;
+        }
 
 
     }
