@@ -30,6 +30,7 @@ ParkingLot::~ParkingLot()
 
 int ParkingLot::getCount()
 {
+    std::cout<< "Number of vehicles parked: " << _count << std::endl;
     return _count;
 }
 
@@ -43,9 +44,9 @@ bool ParkingLot::parkVehicle(Vehicle* vehicleOBJ)
         return true;
 
     }
-    else
+    if(_count == _maximum)
     {
-        //std::cout<< "The lot is full" << std::endl;;
+        std::cout<< "The lot is full" << std::endl;;
         return false;
 
     }
