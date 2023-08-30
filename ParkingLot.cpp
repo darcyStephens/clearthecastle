@@ -39,13 +39,13 @@ bool ParkingLot::parkVehicle(Vehicle* vehicleOBJ)
     {
         vehicles[_count] = vehicleOBJ;
         _count++;
-        std::cout<<"Number of vehicles parked: " << _count <<std::endl;
+        //std::cout<<"Number of vehicles parked: " << _count <<std::endl;
         return true;
 
     }
     else
     {
-        std::cout<< "The lot is full" << std::endl;;
+        //std::cout<< "The lot is full" << std::endl;;
         return false;
 
     }
@@ -58,13 +58,11 @@ bool ParkingLot::unparkVehicle(int ID)
         if(vehicles[i]->getID() == ID)
         {
             delete vehicles[i];
-            std::cout<<"unparked vehicle " << ID << std::endl;
+            //std::cout<<"unparked vehicle " << ID << std::endl;
             
             return true;
         }
-        else{
-            std::cout<<"Vehicle not in the lot" << std::endl;
-        }
+        
 
 
     }
