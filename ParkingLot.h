@@ -17,8 +17,8 @@ class ParkingLot: public Vehicle
     ParkingLot(int maximum);
     ~ParkingLot();
     int getCount();
-    void parkVehicle(Vehicle* vehicleOBJ);
-    void unparkVehicle(int ID);
+    bool parkVehicle(Vehicle* vehicleOBJ);
+    bool unparkVehicle(int ID);
     int countOverstayingVehicles(int maxParkingDuration);
 
 

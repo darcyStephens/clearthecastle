@@ -34,25 +34,25 @@ int ParkingLot::getCount()
     return _count;
 }
 
-void ParkingLot::parkVehicle(Vehicle* vehicleOBJ)
+bool ParkingLot::parkVehicle(Vehicle* vehicleOBJ)
 {
     if(_count < _maximum)
     {
         vehicles[_count] = vehicleOBJ;
         _count++;
         //std::cout<<"Number of vehicles parked: " << _count <<std::endl;
-        
+        return true;
 
     }
     if(_count == _maximum)
     {
         std::cout<< "The lot is full" << std::endl;;
-        
+        return false;
 
     }
 }
 
-void ParkingLot::unparkVehicle(int ID)
+bool ParkingLot::unparkVehicle(int ID)
 {
     for(int i = 0; i < _maximum; i++)
     {
@@ -61,12 +61,14 @@ void ParkingLot::unparkVehicle(int ID)
             delete vehicles[i];
             //std::cout<<"unparked vehicle " << ID << std::endl;
             
-           
+            return true;
         }
         
 
 
     }
+    return false;
+
     
 }
 
