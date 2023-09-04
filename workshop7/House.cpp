@@ -11,12 +11,12 @@ House::House()
     appliance = nullptr;
 }
 
-House::House(int numOfAppliances, int maxNumOfAppliances)
+House::House(int numOfAppliances)
 {
     _count = 0;
     _numAppliances = numOfAppliances;
-    _maxNumOfAppliances = maxNumOfAppliances;
-    appliance = new Appliance*[maxNumOfAppliances];
+    _maxNumOfAppliances = 10;
+    appliance = new Appliance*[_maxNumOfAppliances];
 }
 
 bool House::addAppliance(Appliance* app)

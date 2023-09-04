@@ -13,7 +13,7 @@ class House: public Appliance
     public:
     Appliance** appliance;
     House();
-    House(int numOfAppliances, int maxNumOfAppliances);
+    House(int numOfAppliances);
     bool addAppliance(Appliance* appliance);
     double getTotalPowerConsumption();
 
