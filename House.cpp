@@ -25,6 +25,7 @@ bool House::addAppliance(Appliance* app)
     {
         appliance[_count] = app;
         _count++;
+        
         return true;
     }
     return false;
