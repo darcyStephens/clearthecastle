@@ -6,7 +6,7 @@ class AirVehicle
     protected:
     int _weight;
     int _numberOfFlights;
-    int _fuel;
+    float _fuel;
 
 
     public:
