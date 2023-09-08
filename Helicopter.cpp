@@ -7,10 +7,10 @@
 
 Helicopter::Helicopter()
 {
-    int _weight = 0;
-    int _numberOfFlights = 0;
-    int _fuel = 0;
-    std::string name = "";
+    int _weight;
+    int _numberOfFlights;
+    int _fuel;
+    std::string name;
 }
 
 Helicopter::Helicopter(int w, std::string n)

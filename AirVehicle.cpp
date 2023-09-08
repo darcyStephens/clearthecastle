@@ -3,9 +3,9 @@
 #include <string>
 AirVehicle::AirVehicle()
 {
-    int _weight = 0;
-    int _numberOfFlights = 0;
-    int _fuel = 0;
+    int _weight;
+    int _numberOfFlights;
+    int _fuel;
 }
 
 AirVehicle::AirVehicle(int w)
