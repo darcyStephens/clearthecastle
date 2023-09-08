@@ -1,5 +1,6 @@
 #include "AirVehicle.h"
-
+#include <iostream>
+#include <string>
 int main()
 {
     AirVehicle plane(20);

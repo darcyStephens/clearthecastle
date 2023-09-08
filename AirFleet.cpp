@@ -1,4 +1,6 @@
 #include "AirFleet.h"
+#include <iostream>
+#include <string>
 
 AirFleet::AirFleet()
 {

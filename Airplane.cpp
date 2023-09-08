@@ -1,5 +1,7 @@
 #include "AirVehicle.h"
 #include "Airplane.h"
+#include <iostream>
+#include <string>
 
 Airplane::Airplane()
 {

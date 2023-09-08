@@ -1,6 +1,7 @@
 #include "AirVehicle.h"
 #include "Airplane.h"
-
+#include <iostream>
+#include <string>
 int main()
 {
     Airplane ces(100, 12);

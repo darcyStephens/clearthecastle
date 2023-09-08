@@ -1,5 +1,6 @@
 #include "AirVehicle.h"
-
+#include <iostream>
+#include <string>
 AirVehicle::AirVehicle()
 {
     int _weight = 0;

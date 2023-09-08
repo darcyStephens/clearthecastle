@@ -1,6 +1,7 @@
 #ifndef AIRVEHICLE_H
 #define AIRVEHICLE_H
-
+#include <iostream>
+#include <string>
 class AirVehicle
 {
     protected:
