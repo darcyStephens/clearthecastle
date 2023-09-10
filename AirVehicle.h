@@ -14,7 +14,7 @@ class AirVehicle
     AirVehicle();
     AirVehicle(int w);
     void refuel();
-    void virtual fly(int headwind, int minutes)
+    virtual void fly(int headwind, int minutes)
     {
         _numberOfFlights++;
     };
