@@ -10,9 +10,9 @@ University::University(std::string name, std::string location)
     CourseArray = {};
 }
 
-void University::addCourse(int id, std::string name, int courseID, std::string courseName)
+void University::addCourse(int id, std::string name)
 {
-    Course course(courseID, courseName);
+    Course course(id, name);
     CourseArray.push_back(course);
 
 }

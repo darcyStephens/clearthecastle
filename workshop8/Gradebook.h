@@ -11,7 +11,7 @@ class Gradebook
 {
     private:
     int student_ID;
-    std::vector<Grade>GradesArray;
+    std::vector<Grade> GradesArray;
 
     public:
 

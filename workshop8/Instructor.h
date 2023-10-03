@@ -6,9 +6,7 @@
 
 class Instructor: public Person
 {
-    private:
-    std::string name;
-
+    
     public:
     Instructor(std::string name);
 
